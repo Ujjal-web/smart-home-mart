@@ -1,27 +1,17 @@
+import AboutSection from "./components/AboutSection";
+import Categories from "./components/Categories";
+import FeaturedProducts from "./components/FeaturedProducts";
+import HeroSection from "./components/HeroSection";
+
 export default function HomePage() {
   return (
     <main className="space-y-28">
 
       {/* 1. Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-28">
-        <div className="max-w-6xl mx-auto text-center px-4">
-          <h1 className="text-5xl font-bold mb-6">
-            Smart Home Mart
-          </h1>
-          <p className="text-xl max-w-2xl mx-auto mb-8">
-            A multi-vendor marketplace for smart home devices.
-            Upgrade your home with trusted technology.
-          </p>
-          <div className="flex justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-indigo-600 font-semibold rounded-full">
-              Browse Products
-            </button>
-            <button className="px-8 py-4 border border-white rounded-full">
-              Become a Vendor
-            </button>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
+      <FeaturedProducts />
+      <Categories />
+      <AboutSection />
 
       {/* 2. Categories */}
       <section className="max-w-6xl mx-auto px-4">
@@ -151,7 +141,7 @@ export default function HomePage() {
       </section>
 
       {/* 8. Newsletter */}
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-24 text-center">
+      <section className="bg-linear-to-r from-purple-600 to-indigo-600 text-white py-24 text-center">
         <h2 className="text-3xl font-bold mb-4">
           Get Smart Deals & Updates
         </h2>
