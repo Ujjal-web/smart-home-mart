@@ -4,14 +4,14 @@ import { testimonials } from '../data/mock';
 
 const Testimonials = () => {
     return (
-        <section className="py-24 bg-[#2C2C2C] relative overflow-hidden">
+        <section className="py-16 bg-[#2C2C2C] relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-72 h-72 bg-[#C4B5A0]/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C4B5A0]/5 rounded-full blur-3xl"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12">
                     <p className="text-xs uppercase tracking-wider text-[#C4B5A0] mb-4" style={{ letterSpacing: '1px' }}>
                         Customer Stories
                     </p>
@@ -33,7 +33,7 @@ const Testimonials = () => {
                             key={testimonial.id}
                             className="bg-[#3D3D3D] border-[#4A4A4A] hover:border-[#C4B5A0] transition-all duration-500 group"
                         >
-                            <CardContent className="p-8">
+                            <CardContent className="p-6">
                                 {/* Quote Icon */}
                                 <div className="mb-6">
                                     <Quote className="w-10 h-10 text-[#C4B5A0] opacity-50" />

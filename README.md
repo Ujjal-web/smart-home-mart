@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Smart Home Mart
 
-## Getting Started
+A premium multi-vendor smart home e-commerce application built with Next.js (App Router) and Express.js/MongoDB.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Landing Page
+- Beautiful, responsive design with 7 sections:
+  - Hero, Featured Products, Categories, Why Choose Us, About, Testimonials, Newsletter.
+- Fully functional Navbar and Footer.
+- No authentication required to view.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Authentication
+- Secure login using NextAuth.js.
+- **Mock Credentials**:
+  - Email: `test@example.com`
+  - Password: `1234`
+- Supports Google Authentication (configured in `.env.local` if needed).
+- Protected routes (Add Item page).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Item List Page (`/items`)
+- Fetches products from the Express.js backend.
+- Displays items in a responsive grid.
+- Loading and Error states handled.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Item Details Page (`/items/[id]`)
+- Shows full product details including image, price, description, features, and compatibility.
+- Dynamic data fetching.
 
-## Learn More
+### 5. Add Item Page (`/add-item`)
+- **PROTECTED**: Only accessible when logged in.
+- Form to add new products to the database.
+- Toast notification on success.
 
-To learn more about Next.js, take a look at the following resources:
+## Setup & Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
+- Node.js installed.
+- MongoDB running locally or a cloud URI.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Backend (Express Server)
+1. Navigate to `smart-home-server`:
+   ```bash
+   cd smart-home-server
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Setup `.env`:
+   - Ensure `MONGODB_URI` matches your local/cloud instance.
+4. Seed Database (Optional):
+   ```bash
+   npm run seed
+   ```
+5. Start Server:
+   ```bash
+   npm run dev
+   # Runs on http://localhost:5000
+   ```
 
-## Deploy on Vercel
+### Frontend (Next.js)
+1. Navigate to `smart-home-mart`:
+   ```bash
+   cd smart-home-mart
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Setup `.env.local`:
+   ```bash
+   EXPRESS_API_URL=http://localhost:5000
+   NEXTAUTH_SECRET=your_secret
+   NEXTAUTH_URL=http://localhost:3000
+   ```
+4. Start App:
+   ```bash
+   npm run dev
+   # Runs on http://localhost:3000
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Routes Summary
+- `/` - Landing Page (Public)
+- `/items` - Product Listing (Public)
+- `/items/[id]` - Product Details (Public)
+- `/login` - Login Page (Public)
+- `/add-item` - Create Product (Protected)

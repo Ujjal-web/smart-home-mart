@@ -5,10 +5,10 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-[#2C2C2C] text-[#FAF9F7] pt-16 pb-8">
+        <footer className="bg-[#2C2C2C] text-[#FAF9F7] pt-12 pb-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main Footer Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
                     {/* Brand Section */}
                     <div>
                         <div className="flex items-center space-x-2 mb-6">
@@ -82,12 +82,12 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/" className="text-sm text-[#D4C4B0] hover:text-[#C4B5A0] transition-colors duration-300">
+                                <Link href="/about" className="text-sm text-[#D4C4B0] hover:text-[#C4B5A0] transition-colors duration-300">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/" className="text-sm text-[#D4C4B0] hover:text-[#C4B5A0] transition-colors duration-300">
+                                <Link href="/contact" className="text-sm text-[#D4C4B0] hover:text-[#C4B5A0] transition-colors duration-300">
                                     Contact
                                 </Link>
                             </li>

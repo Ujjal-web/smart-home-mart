@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { Home } from 'lucide-react';
 import { Button } from './ui/button';
 import MobileMenu from './MobileMenu';
+import UserNav from './UserNav';
 
 const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Products', path: '/items' },
-        { name: 'Categories', path: '/items' },
-        { name: 'About', path: '/' },
-        { name: 'Contact', path: '/' }
+        { name: 'About', path: '/about' },
+        { name: 'Contact', path: '/contact' }
     ];
 
     return (
@@ -48,23 +48,8 @@ const Navbar = () => {
 
                     {/* Desktop Action Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <Link href="/items">
-                            <Button
-                                variant="ghost"
-                                className="text-sm uppercase tracking-wider text-[#2C2C2C] hover:text-[#C4B5A0] hover:bg-transparent transition-colors duration-300"
-                                style={{ letterSpacing: '1px' }}
-                            >
-                                Items
-                            </Button>
-                        </Link>
-                        <Link href="/login">
-                            <Button
-                                className="text-sm uppercase tracking-wider bg-[#C4B5A0] text-[#FAF9F7] hover:bg-[#6B4E37] transition-all duration-300 px-6 py-5 rounded"
-                                style={{ letterSpacing: '1px' }}
-                            >
-                                Login
-                            </Button>
-                        </Link>
+
+                        <UserNav />
                     </div>
 
                     {/* Mobile Menu Button */}

@@ -1,6 +1,8 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AuthProvider from "./components/AuthProvider";
+import { Toaster } from "sonner";
 
 export const metadata = {
   title: "SmartHome Marketplace",
@@ -10,12 +12,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-50 text-gray-900">
-        <Navbar />
-        <main className="mx-auto w-full max-w-6xl px-4 py-8">
+      <body className="max-w-7xl mx-auto min-h-screen">
+        <AuthProvider>
+          <Navbar />
           {children}
-        </main>
-        <Footer />
+          <Toaster position="top-center" />
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

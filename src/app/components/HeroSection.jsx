@@ -4,18 +4,8 @@ import { Button } from './ui/button';
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen flex items-center bg-[#FAF9F7] overflow-hidden">
+        <section className="relative min-h-screen flex items-center bg-[#FAF9F7] overflow-hidden mt-20">
             {/* Background Image with Overlay */}
-            {/* <div className="absolute inset-0 z-0">
-                <div
-                    className="w-full h-full object-cover"
-                    style={{
-                        backgroundImage: "url('https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBpbnRlcmlvcnxlbnwwfHx8fDE3Njg0NjY2Mzd8MA&ixlib=rb-4.1.0&q=85')"
-                    }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F7]/95 via-[#FAF9F7]/85 to-transparent" />
-            </div> */}
-
             <div className="absolute inset-0 z-0">
                 <img
                     src="https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBpbnRlcmlvcnxlbnwwfHx8fDE3Njg0NjY2Mzd8MA&ixlib=rb-4.1.0&q=85"
@@ -26,7 +16,7 @@ const HeroSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
                 <div className="max-w-4xl mx-auto space-y-8">
                     {/* Badge */}
                     <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-[#C4B5A0]/30 shadow-sm">
@@ -69,7 +59,7 @@ const HeroSection = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-8 pt-16 max-w-3xl mx-auto">
+                    <div className="grid grid-cols-3 gap-8 pt-12 max-w-3xl mx-auto">
                         <div className="space-y-2">
                             <div className="text-4xl sm:text-5xl font-light text-[#2C2C2C]" style={{ fontFamily: 'serif' }}>
                                 100K+

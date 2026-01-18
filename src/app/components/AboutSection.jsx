@@ -10,7 +10,7 @@ const iconMap = {
 
 const AboutSection = () => {
     return (
-        <section className="py-24 bg-[#FAF9F7]">
+        <section className="py-16 bg-[#FAF9F7]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Left Content */}
@@ -73,8 +73,8 @@ const AboutSection = () => {
                 </div>
 
                 {/* Values Section */}
-                <div className="mt-24">
-                    <div className="text-center mb-12">
+                <div className="mt-16">
+                    <div className="text-center mb-10">
                         <p className="text-xs uppercase tracking-wider text-[#C4B5A0] mb-4" style={{ letterSpacing: '1px' }}>
                             What Drives Us
                         </p>
@@ -92,7 +92,7 @@ const AboutSection = () => {
                             return (
                                 <div
                                     key={index}
-                                    className="text-center p-6 bg-[#FFFFFF] rounded-lg border border-[#F5F3F0] hover:shadow-lg transition-shadow duration-300"
+                                    className="text-center p-5 bg-[#FFFFFF] rounded-lg border border-[#F5F3F0] hover:shadow-lg transition-shadow duration-300"
                                 >
                                     <div className="w-14 h-14 bg-[#C4B5A0]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                                         {IconComponent && <IconComponent className="w-7 h-7 text-[#C4B5A0]" />}

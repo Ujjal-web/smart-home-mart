@@ -5,7 +5,7 @@ export function proxy(req) {
 
     // 1) Protect the /add-item page
     if (pathname.startsWith("/add-item")) {
-        const session = req.cookies.get("auth_session")?.value;
+        const session = req.cookies.get("next-auth.session-token")?.value || req.cookies.get("__Secure-next-auth.session-token")?.value;
         if (!session) {
             const url = req.nextUrl.clone();
             url.pathname = "/login";
@@ -16,7 +16,7 @@ export function proxy(req) {
 
     // 2) Protect creating item (POST) through Next origin
     if (pathname === "/api/items" && req.method === "POST") {
-        const session = req.cookies.get("auth_session")?.value;
+        const session = req.cookies.get("next-auth.session-token")?.value || req.cookies.get("__Secure-next-auth.session-token")?.value;
         if (!session) {
             return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
         }

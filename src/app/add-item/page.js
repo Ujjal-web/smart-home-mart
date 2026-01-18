@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function AddItemPage() {
     const router = useRouter();
@@ -24,6 +25,7 @@ export default function AddItemPage() {
         const payload = {
             name: formData.get("name"),
             price: formData.get("price"),
+            oldPrice: formData.get("oldPrice"),
             vendorName: formData.get("vendorName"),
             category: formData.get("category"),
             brand: formData.get("brand"),
@@ -53,11 +55,12 @@ export default function AddItemPage() {
         }
 
         // success
+        toast.success("Product created successfully!");
         router.push("/items");
     }
 
     return (
-        <div className="mx-auto max-w-3xl">
+        <div className="space-y-6">
             {/* Header */}
             <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <div>
@@ -108,6 +111,16 @@ export default function AddItemPage() {
                                     type="number"
                                     min="0"
                                     placeholder="e.g. 799"
+                                    className="w-full rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black"
+                                />
+                            </Field>
+
+                            <Field label="Old Price (৳)">
+                                <input
+                                    name="oldPrice"
+                                    type="number"
+                                    min="0"
+                                    placeholder="e.g. 999 (Optional)"
                                     className="w-full rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black"
                                 />
                             </Field>

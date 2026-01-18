@@ -5,10 +5,10 @@ import { featuredProducts } from '../data/mock';
 
 const FeaturedProducts = () => {
   return (
-    <section className="py-24 bg-[#FAF9F7]">
+    <section className="py-16 bg-[#FAF9F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-wider text-[#C4B5A0] mb-4" style={{ letterSpacing: '1px' }}>
             Best Sellers
           </p>

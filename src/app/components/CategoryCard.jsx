@@ -52,7 +52,7 @@ const CategoryCard = ({ category }) => {
                 </div>
 
                 {/* Category Info */}
-                <div className="p-6">
+                <div className="p-5">
                     <h3 className="text-2xl font-light text-[#2C2C2C] mb-2" style={{ fontFamily: 'serif' }}>
                         {category.name}
                     </h3>

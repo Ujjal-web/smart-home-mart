@@ -37,7 +37,7 @@ const Newsletter = () => {
     };
 
     return (
-        <section className="py-24 bg-gradient-to-br from-[#D4C4B0] via-[#C4B5A0] to-[#D4C4B0] relative overflow-hidden">
+        <section className="py-16 bg-linear-to-br from-[#D4C4B0] via-[#C4B5A0] to-[#D4C4B0] relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-[#FAF9F7]/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#6B4E37]/10 rounded-full blur-3xl"></div>
@@ -98,7 +98,7 @@ const Newsletter = () => {
                 </p>
 
                 {/* Benefits */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                     <div className="bg-[#FAF9F7]/10 backdrop-blur-sm rounded-lg p-6 border border-[#FAF9F7]/20">
                         <p className="text-3xl font-light text-[#FAF9F7] mb-2" style={{ fontFamily: 'serif' }}>
                             20%
