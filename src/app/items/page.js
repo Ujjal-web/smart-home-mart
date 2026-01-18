@@ -5,7 +5,7 @@ import { Plus } from "lucide-react";
 export const dynamic = "force-dynamic";
 
 async function getItems() {
-    const res = await fetch(`${process.env.EXPRESS_API_URL}/api/items`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_EXPRESS_API_URL}/api/items`, {
         cache: "no-store",
     });
 
@@ -23,7 +23,7 @@ export default async function ItemsPage() {
                 <div className="rounded-2xl border border-red-100 bg-red-50 p-6 text-center">
                     <h1 className="text-xl font-bold text-red-800">Connection Error</h1>
                     <p className="mt-2 text-sm text-red-600">
-                        Could not load items. Please ensure the server is running on port 5000.
+                        Could not load items. Please ensure the server is running.
                     </p>
                 </div>
             </div>

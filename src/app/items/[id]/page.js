@@ -6,7 +6,7 @@ import { Button } from "@/app/components/ui/button";
 export const dynamic = "force-dynamic";
 
 async function getItem(id) {
-    const res = await fetch(`${process.env.EXPRESS_API_URL}/api/items/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_EXPRESS_API_URL}/api/items/${id}`, {
         cache: "no-store",
     });
 

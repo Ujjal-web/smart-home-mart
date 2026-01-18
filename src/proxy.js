@@ -24,7 +24,7 @@ export function proxy(req) {
 
     // 3) Proxy /api/items* to Express
     if (pathname.startsWith("/api/items")) {
-        const targetUrl = new URL(pathname + search, process.env.EXPRESS_API_URL);
+        const targetUrl = new URL(pathname + search, process.env.NEXT_PUBLIC_EXPRESS_API_URL);
         return NextResponse.rewrite(targetUrl);
     }
 

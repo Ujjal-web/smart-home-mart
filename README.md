@@ -70,7 +70,7 @@ A premium multi-vendor smart home e-commerce application built with Next.js (App
    ```
 3. Setup `.env.local`:
    ```bash
-   EXPRESS_API_URL=http://localhost:5000
+   NEXT_PUBLIC_EXPRESS_API_URL=http://localhost:5000
    NEXTAUTH_SECRET=your_secret
    NEXTAUTH_URL=http://localhost:3000
    ```
